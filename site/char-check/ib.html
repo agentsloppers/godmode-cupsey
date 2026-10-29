@@ -1,0 +1,13 @@
+<!doctype html><meta charset="utf-8"><title>ib</title>
+<style>body{margin:0;background:#111}img{height:360px;object-fit:contain}.row{display:flex;gap:4px}</style>
+<div class="row" id="r"></div>
+<script>
+const n=12;
+const r=document.getElementById('r');
+for(let i=1;i<=n;i++){
+  const img=document.createElement('img');
+  img.src='/char-check/ib/f'+String(i).padStart(2,'0')+'.jpg';
+  img.onerror=()=>img.remove();
+  r.appendChild(img);
+}
+</script>
